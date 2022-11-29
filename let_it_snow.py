@@ -6,15 +6,15 @@ def main(speed=0, bg_color="grey"):
     # create Turtle object
     turtle_screen = turtle.Screen()
     myTurtle = turtle.Turtle()
-    
+
     # set speed to 'fastest = 0'
     myTurtle.speed(speed)
     # change background color
     turtle_screen.bgcolor(bg_color)
-  
- 
-    """TODO: define different colors here"""
 
+    """TODO: define different colors here"""
+    colors_to_choose_from = ["red", "green", "blue", "black", "white", "darkorange", "navy", "yellow", "gray",
+                             "darkred", "purple", "magenta"]
 
     for _ in range(10):
         # define some params
@@ -27,6 +27,7 @@ def main(speed=0, bg_color="grey"):
         myTurtle.penup()
         myTurtle.goto(pos[0], pos[1])
         myTurtle.pendown()
+        myTurtle.color(np.random.choice(colors_to_choose_from))
 
         # draw the snowflake
         for _ in range(8):
